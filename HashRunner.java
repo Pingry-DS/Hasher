@@ -33,7 +33,14 @@ public class HashRunner {
         int [] hashTable = new int [size];
         for(int j = 0; j < words.size(); j++)
         {
+            // Compute the hash
             int hashcode = Math.abs(stdnt.hash(words.get(j)));
+
+            // Confirm that the same hash is given for the same input
+            if (hashcode != Math.abs(stdnt.hash(words.get(j))))
+              throw new RuntimeException("You didn't give the same hashcode you dirty dog!");
+
+            // Add to the table, count collisions, etc
             if(hashTable[hashcode%size] != 0)
                 collisions++;
             else
@@ -51,6 +58,7 @@ public class HashRunner {
        hashers.add(new SumHasher());
        hashers.add(new LengthHasher());
        hashers.add(new BuiltinHasher());
+       hashers.add(new BestHasherZhang());
 
        return hashers;
     }
