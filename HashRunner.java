@@ -37,7 +37,7 @@ public class HashRunner {
             int hashcode = Math.abs(stdnt.hash(words.get(j)));
 
             // Confirm that the same hash is given for the same input
-            if (hashcode != Math.abs(stdnt.hash(words.get(j))));
+            if (hashcode != Math.abs(stdnt.hash(words.get(j))))
               throw new RuntimeException("You didn't give the same hashcode you dirty dog!");
 
             // Add to the table, count collisions, etc
