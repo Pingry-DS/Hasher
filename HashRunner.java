@@ -51,6 +51,7 @@ public class HashRunner {
        hashers.add(new SumHasher());
        hashers.add(new LengthHasher());
        hashers.add(new BuiltinHasher());
+       hashers.add(new BestHasherZhang());
 
        return hashers;
     }
