@@ -1,4 +1,4 @@
-public class Ami3Hasher implements Hasher
+public class Hashandani implements Hasher
 {
 	public String getAuthors()
 	{
