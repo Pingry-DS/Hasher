@@ -7,17 +7,18 @@ public class Hashandani implements Hasher
 	
 	public int hash(String s)
 	{
-		int hashed = 0; 
+		int hashed = 0;
+		int finalHash = 0;
+		
 		for (int x = 0; x < s.length(); x++)
 		{
-			hashed += (int) (s.charAt(x) * (x + 1));
+			hashed = (int) s.charAt(x);
+			hashed = hashed % 17;
+			hashed *= Math.pow(17, x);
+			finalHash += hashed;
 		}
-		hashed =  (int) Math.pow(5, hashed/(hashed-2));
+		//System.out.println(finalHash);
+		return finalHash;
 		
-		hashed = (int)hashed >> 3;
-		
-		hashed /= s.length();
-		
-		return (int) Math.floor(hashed);
 	}
 }
