@@ -64,7 +64,7 @@ public class HashSet implements Hasher
     {
       num += (int)(s.charAt(i));
     }
-    return (int)((Math.pow(num, 3)) % 10);
+    return (int)((Math.pow(num, 3)) % arr.length);
   }
 
   public String getAuthors()
