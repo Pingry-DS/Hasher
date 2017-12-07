@@ -11,10 +11,15 @@ public class TomHasher implements Hasher
   {
     int lengthValue = (s.length() * 10000) - 10000; //String of 1 length starts at 0
     int firstLetterValue = (int) (s.charAt(0) * 100) - 6500; //Subtracting ascii value of A
+    int secondLetterValue = 0;
     if(s.length > 1)
     {
-      int secondLetterValue = (int) s.charAt(1) - 65;
+      secondLetterValue = (int) s.charAt(1) - 65;
     }
+
+
+
+
 
     r = lengthValue + firstLetterValue + secondLetterValue;
     return r;
