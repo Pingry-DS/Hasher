@@ -14,4 +14,8 @@ public class DillonHasher implements Hasher
         returnVal = returnVal % 40;
         return returnVal;
     }
+	public String getAuthors()
+	{
+		return "Dillon Shu";
+	}
 }
