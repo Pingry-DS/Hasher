@@ -12,6 +12,6 @@ public class HasherBeckmen
 
   public String getAuthors()
   {
-    return "Introduced by Ms. Thuzar - every value from 0 to (length - 1) will hash to a unique value.";
+    return "Drew Beckmen";
   }
 }
