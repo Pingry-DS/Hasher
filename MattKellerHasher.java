@@ -1,7 +1,3 @@
-interface Hasher{
-  public int hash(String s);
-  public String getAuthors();
-}
 
 public class MattKellerHasher implements Hasher
 {
