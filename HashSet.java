@@ -1,4 +1,4 @@
-public class HashSet
+public class HashSet implements Hasher
 {
   private int size;
   private String[] arr;
@@ -69,6 +69,6 @@ public class HashSet
 
   public String getAuthors()
   {
-    return "Ascii values cubed: by Jeremy Newman";
+    return "Jeremy Newman";
   }
 }
